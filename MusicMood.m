@@ -7,17 +7,6 @@
 
 % ****************************Audio Read**********************************%
  [song,fs] = audioread('haoting.mp3');
-% [song,fs] = audioread('iloveyouso.mp3');
-% [song,fs] = audioread('individuallytwisted.mp3');
-% [song,fs] = audioread('inloveagain.mp3');
-% [song,fs] = audioread('farewellandromeda.mp3');
-% [song,fs] = audioread('1984.mp3');
-% [song,fs] = audioread('Love Never Felt So Good.mp3');
-% [song,fs] = audioread('Paris In Your Eyes.mp3');
-% [song,fs] = audioread('Come Together.mp3');
-% [song,fs] = audioread('Here Comes The Sun.mp3');
-% [song,fs] = audioread('Wanna Be Startin Somethin.mp3');
-% [song,fs] = audioread('Manhattan.mp3');
 
 songLeft = song(:,1);
 songRight = song(:,2);
@@ -26,9 +15,9 @@ songLength = length(songMono);
 songSub = songLeft - songRight;
 
 % normalization
-songMonoMax = max(songMono);
+songMonoMax = max(abs(songMono));
 songMono = songMono / songMonoMax;
-songSubMax = max(songSub);
+songSubMax = max(abs(songSub));
 songSub = songSub / songSubMax;
 
 % play music
