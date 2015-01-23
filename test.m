@@ -1,4 +1,4 @@
-root = 'testcase/3/';
+root = 'testcase/4/';
 subRoots = dir(root);
 subRoots = subRoots(3:end); %exclude . and .. folder
 numSongs = length(subRoots);
